@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheet Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="top-part.css">
+    <link rel="shortcut icon" href="assets/sheets (1).png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="top-container">
+        <div class="top-head">
+           <div class="top-right">
+                <img src="assets/sheets(1).png" width="40px" alt="icon">
+                <div class="top-tools">
+                    <div>
+                        <h2>
+                            Untitled Spreadsheet
+                        </h2>
+                        <img src="assets/star.png" width="20px" alt="">
+                    </div>
+                    <ul>
+                        <li>File</li>
+                        <li>Edit</li>
+                        <li>View</li>
+                        <li>Insert</li>
+                        <li>Format</li>
+                        <li>Data</li>
+                        <li>Tools</li>
+                        <li>Extensions</li>
+                    </ul>
+                </div>
+           </div>
+           <div class="top-left">
+            <i class='bx bx-comment-detail'></i>
+            <i class='bx bx-video'></i>
+            <i class='bx bx-user-plus'></i>
+           </div>
+        </div>
+        <form id="form" class="options" onchange="onFormChange()">
+
+            <select name="fontFamily" id="fontFamily">
+                <option value="'Courier New', Courier, monospace">Courier New</option>
+                <option value="'Times New Roman', Times, serif" selected>
+                  Times New Roman
+                </option>
+                <option value="Arial, Helvetica, sans-serif">Arial Helvatica</option>           
+            </select>
+            
+            <input type="number" name="fontSize" id="fontSize" min="8" max="30" value="16" placeholder="Font size">
+           
+            <div>
+                <input type="checkbox" id="bold" name="bold" class="hidden-input">
+                <label class='bx bx-bold' for="bold"></label>
+            </div>
+
+           <div>
+                <input type="checkbox" id="itallic" name="itallic" class="hidden-input">
+                <label class='bx bx-italic' for="itallic" ></label>
+           </div>
+
+            <div>           
+                <input type="checkbox" name="underline" id="underline" class="hidden-input">
+                <label class='bx bx-underline' for="underline" ></label>
+            </div>
+
+            <div>
+                <input type="radio" name="textAlign" id="left-align" value="left" class="hidden-input" checked>
+                <label class='bx bx-align-left' for="left-align"></label>
+
+                <input type="radio" name="textAlign" id="middle-align" value="center" class="hidden-input">
+                <label class='bx bx-align-middle' for="middle-align"></label>
+               
+                <input type="radio" name="textAlign" id="right-align" value="right" class="hidden-input">
+                <label class='bx bx-align-right' for="right-align"></label>
+               
+            </div>
+            <div>
+                <input type="color" name="textcolor" value="black" id="color" class="hidden-input">
+                <label class='bx bx-font-color' for="color" ></label>
+            </div>
+            <div>
+                <input type="color" name="colorfill" value="#ffffff" id="backgroundColor" class="hidden-input">
+                <label class='bx bx-color-fill' for="backgroundColor" ></label>
+            </div>
+
+            <button type="button" class='bx bxs-cloud-download'  onclick="exportData()"></button>
+           <button type="button" class='bx bxs-cloud-download'></button>
+          
+
+        </form>
+        <div class="bottom-section">
+            <div id="active-cell">null</div>
+            <input type="text" class="expression" placeholder="f( x )">
+        </div>
+    </section>
+   <section class="root-container">
+        <div class="header"></div>
+        <div class="hero-body">
+            <div class="sno"></div>
+            <div class="main"></div>
+        </div>
+
+   </section>
+   <script src="options.js"></script>
+    <script src="index.js"></script>
+    <script src="export-import.js"></script>
+</body>
+</html>

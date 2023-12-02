@@ -1,0 +1,151 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+   
+}
+.top-container
+{
+    height: 25vh;
+    padding: 10px;
+     background-color: #efefefff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+   
+}
+.top-head
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+   
+}
+.top-right
+{
+  flex: 0.8;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.top-tools
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.top-tools > div
+{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+.top-tools > ul
+{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.top-tools > ul > li
+{
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.top-tools > ul > li:hover
+{
+    background-color: #dadadaff;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.top-left
+{
+   flex: 0.2;
+   padding-inline-end: 20px;
+   display: flex;
+   justify-content:end;
+   align-items: center;
+   gap: 20px;
+}
+.top-left > i
+{
+   
+    padding: 10px;
+    font-size: 20px;
+    background-color: #dadadaff;
+    border-radius: 50%;
+}
+.top-left > i:hover
+{
+    background-color: rgb(207, 205, 205);
+    color: white;
+    cursor: pointer;
+}
+.options
+{
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center; 
+    gap: 15px;
+}
+#fontSize ,#fontFamily
+{
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #e0dddbff;
+}
+.hidden-input {
+    width: 0 !important; 
+    height: 0;
+    border: none ;
+   
+   
+}
+
+.options > div > label, .options > button
+{
+    padding: 5px;
+    border:1px solid #dededeff;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.options > div > label:hover,.options > button:hover
+{
+    background-color: rgb(216, 215, 215);
+}
+.hidden-input:checked + label
+{
+    background-color: #c5c5c5ff;
+    
+}
+
+.bottom-section
+{
+    padding-inline: 20px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.bottom-section > #active-cell
+{
+    padding: 8px;
+    background-color:#ffffff;
+    border-radius: 5px;
+}
+.bottom-section > input
+{
+    flex: 1;
+    padding: 10px;
+    border:1px solid #dadadaff;
+    border-radius: 5px;
+}
